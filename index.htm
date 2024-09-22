@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Responsive con Tailwind</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        
+        <!-- Logo -->
+        <div>
+          <a href="#" class="text-xl font-bold text-blue-600">MiLogo</a>
+        </div>
+
+        <!-- Enlaces de navegación (para pantallas medianas y grandes) -->
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Inicio</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Servicios</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Nosotros</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-blue-600">Contacto</a></li>
+        </ul>
+
+        <!-- Botón de menú móvil -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button focus:outline-none">
+            <svg class="w-6 h-6 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+    <!-- Menú desplegable móvil (hidden por defecto) -->
+    <ul class="mobile-menu hidden md:hidden bg-white px-4 py-4 space-y-2">
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Inicio</a></li>
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Servicios</a></li>
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Nosotros</a></li>
+      <li><a href="#" class="block text-gray-700 hover:text-blue-600">Contacto</a></li>
+    </ul>
+  </nav>
+
+<!-- Carrusel -->
+<div class="carrusel">
+    <div class="list">
+        <div class="item"><img src="/images/headphone1.png" alt="">
+            <div class="intro">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="modelo">Lorem ipsum </div>
+                <div class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quibusdam debitis temporibus quisquam eaque distinctio dicta dolorem adipisci
+                    asperiores accusantium. </div>
+                <button class="seeMore">See more</button>
+            </div>
+            <div class="detail">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing  </div>
+                <div class="specificacion">
+                    <div>
+                        <p>Used time</p>
+                        <p>6 Hours</p>
+                    </div>
+                    <div>
+                        <p>Charge</p>
+                        <p>Type C</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div> 
+                </div>
+                <div class="checkout">
+                    <button>ADD to card</button>
+                    <button>checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item"><img src="/images/headphone2.png" alt="">
+            <div class="intro">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="modelo">Lorem ipsum </div>
+                <div class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quibusdam debitis temporibus quisquam eaque distinctio dicta dolorem adipisci
+                    asperiores accusantium. </div>
+                <button class="seeMore">See more</button>
+            </div>
+            <div class="detail">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing  </div>
+                <div class="specificacion">
+                    <div>
+                        <p>Used time</p>
+                        <p>6 Hours</p>
+                    </div>
+                    <div>
+                        <p>Charge</p>
+                        <p>Type C</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div> 
+                </div>
+                <div class="checkout">
+                    <button>ADD to card</button>
+                    <button>checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item"><img src="/images/headphone3.png" alt="">
+            <div class="intro">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="modelo">Lorem ipsum </div>
+                <div class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quibusdam debitis temporibus quisquam eaque distinctio dicta dolorem adipisci
+                    asperiores accusantium. </div>
+                <button class="seeMore">See more</button>
+            </div>
+            <div class="detail">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing  </div>
+                <div class="specificacion">
+                    <div>
+                        <p>Used time</p>
+                        <p>6 Hours</p>
+                    </div>
+                    <div>
+                        <p>Charge</p>
+                        <p>Type C</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div> 
+                </div>
+                <div class="checkout">
+                    <button>ADD to card</button>
+                    <button>checkout</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="item"><img src="/images/headphone4.png" alt="">
+            <div class="intro">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="modelo">Lorem ipsum </div>
+                <div class="descripcion">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quibusdam debitis temporibus quisquam eaque distinctio dicta dolorem adipisci
+                    asperiores accusantium. </div>
+                <button class="seeMore">See more</button>
+            </div>
+            <div class="detail">
+                <div class="titulo">DESIG SLIDER</div>
+                <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing  </div>
+                <div class="specificacion">
+                    <div>
+                        <p>Used time</p>
+                        <p>6 Hours</p>
+                    </div>
+                    <div>
+                        <p>Charge</p>
+                        <p>Type C</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div>
+                    <div>
+                        <p>Bluetooth</p>
+                        <p>5.3</p>
+                    </div> 
+                </div>
+                <div class="checkout">
+                    <button>ADD to card</button>
+                    <button>checkout</button>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="arrow">
+        <button id="prev"><</button>
+        <button id="back">Go Back</button>
+        <button id="next"></button>
+     </div>
+</div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
