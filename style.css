@@ -4,7 +4,33 @@ nav{
 a{
     text-decoration: none;
 }
+:root{
+    --item1-transform: translate(-100%,-5%) scale(1.5);
+    --item1-filter: blur(30px);
+    --item1-zIndex: 11;
+    --item1-opacity: 0;
 
+    --item2-transform: translate(0,0);
+    --item2-filter: blur(0px);
+    --item2-zIndex: 10;
+    --item2-opacity: 1;
+
+    
+    --item3-transform: translate(50%,10%) scale(0.8);
+    --item3-filter: blur(10px);
+    --item3-zIndex: 9;
+    --item3-opacity: 1;
+
+    --item4-transform: translate(90%,20%) scale(0.5);
+    --item4-filter: blur(30px);
+    --item4-zIndex: 8;
+    --item4-opacity: 1;
+
+    --item5-transform: translate(120%,30%) scale(0.3);
+    --item5-filter: blur(40px);
+    --item5-zIndex: 7;
+    --item5-opacity: 0;
+}
 .carrusel{
     margin-top: -50PX;
     height: 800px;
@@ -35,5 +61,85 @@ height: 80%;
     position: absolute;
     right: 0;
     top: 50%;
-    
+
+}
+.carrusel .list .item .detail{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carrusel .list .item .intro{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carrusel .list .item:nth-child(2) .intro{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s;
+}
+
+.carrusel .list .item:nth-child(n + 6){
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carrusel .list .item:nth-child(2){
+    transform: var(--item2-transform);
+    filter: var(--item2-filter);
+    z-index: var(--item2-zIndex);
+    opacity: var(--item2-opacity);
+}
+
+.carrusel .list .item:nth-child(1){
+    transform: --item1-transform;
+    filter:var(--item1-filter);
+    z-index: var(--item1-zIndex);
+    opacity: var(--item1-opacity);
+    pointer-events: none;
+}
+
+
+.carrusel .list .item:nth-child(3){
+    transform: var(--item3-transform);
+    filter: var(--item3-filter);
+    z-index: var(--item3-zIndex);
+    opacity: var(--item3-opacity);
+}
+
+.carrusel .list .item:nth-child(4){
+    transform: var(--item4-transform);
+    filter: var(--item4-filter);
+    z-index: var(--item4-zIndex);
+    opacity: var(--item4-opacity);
+}
+
+.carrusel .list .item:nth-child(5){
+    transform: var(--item5-transform);
+    filter: var(--item5-filter);
+    z-index: var(--item5-zIndex);
+    opacity: var(--item5-opacity);
+    pointer-events: none;
+}
+
+.arrow{
+    position: absolute;
+    bottom: 10px;
+    width: 1140px;
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow #next,
+.arrow #prev{
+    width: 40px;
+    height: 40px;
 }
