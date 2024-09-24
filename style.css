@@ -1,9 +1,7 @@
 nav{
     z-index: 100;
 }
-a{
-    text-decoration: none;
-}
+
 :root{
     --item1-transform: translate(-100%,-5%) scale(1.5);
     --item1-filter: blur(30px);
@@ -142,4 +140,40 @@ height: 80%;
 .arrow #prev{
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    font-size: large;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+
+.arrow #back{
+    font-weight: 500;
+    border: none;
+    border-bottom:1px solid #555;
+    letter-spacing: 3px;
+    background-color: transparent;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carrusel .list .item .intro .titulo{
+    font-size: 2em;
+}
+.carrusel .list .item .intro .modelo{
+    font-size: 4em;
+    font-weight: 500;
+}
+
+.carrusel .list .item .intro .descripcion{
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.carrusel .list .item .intro .seeMore{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    margin-top: 1.2em;
+    padding: 5px 0;
+
 }
