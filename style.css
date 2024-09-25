@@ -37,12 +37,12 @@ nav{
 }
 .carrusel .list{
 position: absolute;
-top: 0px;
+top: -20px;
 left: 0px;
 width: 1140px;
 max-width: 90%;
 left: 50%;
-transform: translateX(-50%);
+transform: translateX(-45%);
 height: 80%;
 }
 
@@ -58,7 +58,7 @@ height: 80%;
     width: 50%;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 35%;
 
 }
 .carrusel .list .item .detail{
@@ -126,7 +126,7 @@ height: 80%;
 
 .arrow{
     position: absolute;
-    bottom: 10px;
+    bottom: 40px;
     width: 1140px;
     max-width: 90%;
     left: 50%;
@@ -300,7 +300,8 @@ to{
     transition: right 0.5s;
 }
 .carrusel.showDetail .list .item:nth-child(2) img{
-    right: 50%;
+    right: 60%;
+    top: 53px;
 }
 
 .carrusel.showDetail .list .item:nth-child(2) .detail{
@@ -438,9 +439,16 @@ to{
 
 @media screen and (max-width: 991px){
     /* ipad, tablets */
+    .carrusel{
+        height: 850px;
+    }
     .carousel .list .item{
         width: 90%;
+        
     }
+    .carrusel .list{
+        transform: translateX(-31%);
+        }
     .carousel.showDetail .list .item .detail .specifications{
         overflow: auto;
     }
@@ -460,6 +468,7 @@ to{
     
     .carrusel .list{
         height: 100%;
+        transform: translateX(-28%);
     }
     .carrusel .list .item:nth-child(2) .intro{
         width: 50%;
@@ -467,19 +476,27 @@ to{
     
     .carrusel .list .item img{
         width: 40%;
+        left: 150px;
     }
     .carrusel.showDetail .list .item:nth-child(2) .detail{
         backdrop-filter: blur(10px);
         font-size: small;
+        left: 150px;
     }
     .carrusel .list .item:nth-child(2) .intro .des,
     .carrusel.showDetail .list .item:nth-child(2) .detail .des{
         height: 100px;
+        
         overflow: auto;
     }
     .carrusel.showDetail .list .item:nth-child(2) .detail .checkout{
         display: flex;
         width: max-content;
         float: right;
+    }
+    .carrusel.showDetail .list .item img{
+        transform: translate(-100% , 35%);
+        top: -90px;
+    
     }
 }
