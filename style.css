@@ -1,5 +1,10 @@
 nav{
     z-index: 100;
+        /* background-color: linear-gradient(to bottom, #64f19d, #267f0f);
+        background-color: linear-gradient(to bottom, #f4f4f4, #063861);
+        background-color: linear-gradient(to bottom, #d990e6, #bc338e);
+        background-color: linear-gradient(to bottom, #493b2a, #323032);
+        background-color: linear-gradient(to bottom, #5b0f0f, #191719); */
 }
 
 :root{
@@ -141,9 +146,9 @@ height: 80%;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
-    border: 1px solid #555;
+    border: 3px solid #555;
 }
 
 .arrow #back{
