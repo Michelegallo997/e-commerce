@@ -1,12 +1,14 @@
-nav{
-    z-index: 100;
-        /* background-color: linear-gradient(to bottom, #64f19d, #267f0f);
-        background-color: linear-gradient(to bottom, #f4f4f4, #063861);
-        background-color: linear-gradient(to bottom, #d990e6, #bc338e);
-        background-color: linear-gradient(to bottom, #493b2a, #323032);
-        background-color: linear-gradient(to bottom, #5b0f0f, #191719); */
+.meno {
+    z-index: 999; 
 }
-
+.meno .mobile-menu-button {
+    cursor: pointer; 
+}
+.meno .mobile-menu-button {
+    position: relative; 
+    z-index: 9999;
+    cursor: pointer; 
+}
 :root{
     --item1-transform: translate(-100%,-5%) scale(1.5);
     --item1-filter: blur(30px);
@@ -64,6 +66,7 @@ height: 80%;
     position: absolute;
     right: 0;
     top: 35%;
+    pointer-events: none;
 
 }
 .carrusel .list .item .detail{
@@ -436,6 +439,7 @@ to{
     left: 50%;
     transform: translate(-10%, -50%);
     transition: 1s;
+    pointer-events: none;
 }
 .carrusel.showDetail::before{
     transform: translate(-100%, -50%) rotate(90deg);
@@ -462,6 +466,8 @@ to{
     }
 }
 @media screen and (max-width: 767px){
+
+
     /* mobile */
     .carrusel{
         height: 600px;
@@ -482,6 +488,7 @@ to{
     .carrusel .list .item img{
         width: 40%;
         left: 150px;
+        pointer-events: none;
     }
     .carrusel.showDetail .list .item:nth-child(2) .detail{
         backdrop-filter: blur(10px);
@@ -502,6 +509,71 @@ to{
     .carrusel.showDetail .list .item img{
         transform: translate(-100% , 35%);
         top: -90px;
+        pointer-events: none;
     
     }
+}
+
+@media screen and (max-width: 430px){
+
+
+    /* mobile */
+    .carrusel{
+        height: 600px;
+    }
+    .carrusel .list .item{
+        width: 100%;
+        font-size: 10px;
+    }
+    
+    .carrusel .list{
+        height: 100%;
+        transform: translate(-25%, -10%);
+    
+    }
+    .carrusel .list .item:nth-child(2) .intro{
+        text-align: right;
+        width: 60%;
+    }
+    
+    .carrusel .list .item img{
+        width: 44%;
+        left: 120px;
+        top: 260px;
+        pointer-events: none;
+    }
+    .carrusel.showDetail .list .item:nth-child(2) .detail {
+        width: 50%;
+        position: absolute;
+        backdrop-filter: blur(10px);
+        font-size: 10px;
+        left:-90px;
+        right: 0;
+        text-align: right;
+        
+ 
+        
+    }
+
+
+    .carrusel .list .item:nth-child(2) .intro .des,
+    .carrusel.showDetail .list .item:nth-child(2) .detail .des{
+        height: 100px;
+       
+        overflow: auto;
+    }
+    .carrusel.showDetail .list .item:nth-child(2) .detail .checkout{
+        display: flex;
+        width: max-content;
+        float: left;
+       
+    }
+    .carrusel.showDetail .list .item img{
+        transform: translate(-10% , 45%);
+        top: -90px;
+        pointer-events: none;
+    
+    }
+ 
+
 }

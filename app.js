@@ -1,5 +1,12 @@
+// Selecciona el botón de menú y el menú desplegable
 const btn = document.querySelector('.mobile-menu-button');
 const menu = document.querySelector('.mobile-menu');
+
+// Evento para mostrar u ocultar el menú cuando se hace clic en el botón
+btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+});
+
 let nextButton = document.getElementById('next');
 let prevButton = document.getElementById('prev');
 let backButton = document.getElementById('back');
@@ -12,7 +19,7 @@ const backgroundGradients = [
     'linear-gradient(to bottom, #f4f4f4, #063861)', 
     'linear-gradient(to bottom, #5b0f0f, #191719)', 
     'linear-gradient(to bottom, #64f19d, #267f0f)', 
-    'linear-gradient(to bottom, #d990e6, #bc338e)', 
+    'linear-gradient(to bottom, #d990e6, #550f3e)', 
     'linear-gradient(to bottom, #493b2a, #323032)'
 ];
 
@@ -67,6 +74,46 @@ backButton.onclick = function(){
     carrusel.classList.remove('showDetail');
 }
 
-btn.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
+
+
+// -------------------------------------------
+// Agregando deslizamiento táctil (Touch Swipe)
+// -------------------------------------------
+let startX = 0;
+let endX = 0;
+
+listHTML.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX; // Capturamos la posición inicial del toque
+});
+
+listHTML.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX; // Mientras se mueve el dedo, capturamos la posición final
+});
+
+listHTML.addEventListener('touchend', () => {
+    // Detectamos si el gesto fue un deslizamiento hacia la izquierda o derecha
+    if (startX > endX + 50) {
+        showSlider('next'); // Si fue hacia la izquierda, pasamos al siguiente slide
+        currentIndex = (currentIndex + 1) % backgroundGradients.length;
+        setBackground();
+    } else if (startX < endX - 50) {
+        showSlider('prev'); // Si fue hacia la derecha, pasamos al slide anterior
+        currentIndex = (currentIndex - 1 + backgroundGradients.length) % backgroundGradients.length;
+        setBackground();
+    }
+});
+
+// -------------------------------------------
+// Agregando control por teclas del teclado
+// -------------------------------------------
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        showSlider('next'); // Si se presiona la flecha derecha, pasamos al siguiente slide
+        currentIndex = (currentIndex + 1) % backgroundGradients.length;
+        setBackground();
+    } else if (e.key === 'ArrowLeft') {
+        showSlider('prev'); // Si se presiona la flecha izquierda, volvemos al slide anterior
+        currentIndex = (currentIndex - 1 + backgroundGradients.length) % backgroundGradients.length;
+        setBackground();
+    }
 });
