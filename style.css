@@ -519,7 +519,7 @@ to{
 
     /* mobile */
     .carrusel{
-        height: 800px;
+        height: 830px;
     }
     .carrusel .list .item{
         width: 100%;
@@ -539,7 +539,7 @@ to{
     .carrusel .list .item img{
         width: 44%;
         left: 120px;
-        top: 260px;
+        top: 370px;
         pointer-events: none;
     }
     .carrusel.showDetail .list .item:nth-child(2) .detail {
@@ -569,7 +569,7 @@ to{
        
     }
     .carrusel.showDetail .list .item img{
-        transform: translate(-10% , 45%);
+        transform: translate(-10% , 89%);
         top: -90px;
         pointer-events: none;
     
