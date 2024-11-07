@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="bg-white" >
+    <nav id="navbar1" class="navbar  flex justify-center items-center p-4 justify-between text-gray-800 ">
+        <div class="menu">
+            <h1>logo</h1>
+            <img src="" alt="">
+        </div>
+         <div class="bottonMenu md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-blue-700 focus:outline-none">
+                <button id="bottonMenu"> <i class="fas fa-bars fa-lg"></i></button>
+       
+
+        <div id="MenuDesplegable" class="MenuPhone hidden flex">
+           
+            <ul class="flexbox">
+                <li class="mx-2"><a href="" class="hover:text-gray-200"></a>Productos</li>
+                <li class="search-container mx-2"><input type="text" placeholder="Buscar."><i class="fas fa-search"></i></li>
+                <li class="mx-2"><a href="" class="hover-text-gray-200">Contacto</a></li>
+                <li class="mx-2"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        
+</div>  
+</div> 
+        <div class="listMenu hidden md:block">
+            <ul class="flex justify-center items-center">
+                <li class="mx-2"><a href=""></a>Productos</li>
+                <li class="search-container mx-2"><input placeholder="Buscar..." type="text"><i class="fas fa-search"></i></li>
+                <li class="mx-2"><a href="">Contacto</a></li>
+                <li class="mx-2"><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+<section class="section1">
+    <img class="portada" src="assets/milad.jpg" alt="">
+    <h2>Finanzas</h2>
+    <button class="arrowDonw"><i class="fas fa-angle-down fa-3x"></i></button>
+</section>
+
+
+<section class="flex items-center justify-center">   
+<div class=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="contenidoDemo bg-gray-200 p-4 m-4 rounded">
+        <form id="form1" action="" class="flex-col flex items-center justify-center ">
+            <h3>Simulador de Finanzas</h3>
+            <label for="Meta" class="">Meta financiera (en dolares):</label>
+            <input id="Meta" type="number" class="p-2 m-4 rounded" min="0" required>
+            <label for="Tiempo" class="">Tiempo (en meses):</label>
+            <input id="Tiempo" type="number" class="p-2 m-4 rounded" min="0" required>
+            <label for="ahorroInicial" class="">Ahorro Inicial:</label>
+            <input id="ahorroInicial" type="number" class="p-2 m-4 rounded" min="0" required>
+            <button id="calcular" type="button" class="botonFormulario  bg-black text-gray-200 py-1 px-2 border-2 border-gray-800 hover:bg-gray-700 transiton duration-300 rounded">Calcular Ahorro</button>
+        </form>
+    </div>
+    
+    <div class="contenidoDemo bg-gray-200 p-4 m-4 rounded">
+        <form id="form2" action="" class="flex-col flex items-center justify-center ">
+            <h3> Conversión de Moneda</h3>
+            <label for="MontoOriginal" class="">Monto en Moneda Original:</label>
+            <input id="MontoOriginal" type="text" class="p-2 m-4 rounded" min="0" step="0.01" required>
+            <label for="TasaDeCambio" class="">Tasa de Cambio</label>
+            <input id="TasaDeCambio" type="text" class="p-2 m-4 rounded" min="0" step="0.01" required>  
+            <button id="Cambio" type="button" class="botonFormulario  bg-black text-gray-200 py-1 px-2 border-2 border-gray-800 hover:bg-gray-700 transiton duration-300 rounded">Calcular Ahorro</button>
+            <p id="resultado"></p>
+        </form>
+    </div>
+
+    <div class="contenidoDemo bg-gray-200 p-4 m-4 rounded">
+        <form id="form3" action="" class="flex-col flex items-center justify-center">
+            <h3>Calculadora de Presupuesto Mensual</h3>
+            <label for="IngresosMensuales">Ingresos Mensuales</label>
+            <input id="IngresosMensuales" type="number" class="p-2 m-4 rounded" min="0" step="0.01" required>
+            <label for="GastosAlimento">Gastos en Alimento</label>
+            <input type="number" id="GastosAlimento" class="p-2 m-4 rounded" min="0" step="0.01" required>
+            <label for="GastosTrasporte">Gastos de Trasporte</label>
+            <input type="number" id="GastosTrasporte" class="p-2 m-4 rounded" min="0" step="0.01" required>
+            <button id="CalcularPresupuesto" type="button"  class="botonFormulario bg-black text-gray-200 py-1 px-2 border-2 border-gray-800 hover:bg-gray-700 transiton duration-300 rounded ">Calcular Presupuesto</button>
+            <p id="resultado1"></p>
+        </form>
+    </div>
+</div>
+</section>
+
+
+<section id="seccionCard" class="contenedor seccionCard flex justify-center items-center">
+    <div class="cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="card1 p-2 border-2">
+            <img class="imagenCard" src="" alt="Producto">
+            <p class="m-4 text-center">Software de Finanzas</p>
+            <p class="m-4 text-center">Precio: $50</p>
+            <button onclick="agregarAlCarrito({ id: 1, nombre: 'Software de Finanzas', precio: 50 })" class="buttonCard bg-black text-gray-200 py-1 px-2 border-2 border-gray-800 hover:bg-gray-700 transition duration-300">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+<!-- Carrito de Compras -->
+<section id="carritoContainer" class="bg-gray-200 p-4 m-4 rounded">
+    <h3>Carrito de Compras</h3>
+    <div id="carritoItems"></div>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
